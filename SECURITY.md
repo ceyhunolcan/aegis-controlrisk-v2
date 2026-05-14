@@ -12,8 +12,8 @@ Only the latest minor release receives security fixes. v2.x is current.
 ## Reporting a vulnerability
 
 If you've found a security issue, please **do not open a public GitHub
-issue**. Email the contact listed in [COMMERCIAL.md](COMMERCIAL.md)
-with:
+issue**. Email **ceyhunolcan23@gmail.com** (subject line:
+`[aegis-security] <one-line summary>`) with:
 
 - A description of the issue
 - Steps to reproduce
@@ -21,7 +21,9 @@ with:
 - Your suggested fix, if any
 
 Response within two business days. Coordinated disclosure preferred:
-I'll work with you on a fix timeline before any public posting.
+I'll work with you on a fix timeline before any public posting. If you
+prefer encrypted reports, mention so in the first message and I'll send
+a PGP key.
 
 ## What counts as a security issue
 

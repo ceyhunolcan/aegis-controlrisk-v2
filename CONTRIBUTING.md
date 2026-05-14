@@ -5,7 +5,7 @@ Glad you're here. A few things worth knowing before you open a PR.
 ## Setup
 
 ```bash
-git clone https://github.com/CeyhunOlcan/aegis-controlrisk-v2.git
+git clone https://github.com/ceyhunolcan/aegis-controlrisk-v2.git
 cd aegis-controlrisk-v2
 python -m venv .venv && source .venv/bin/activate   # or your env manager
 pip install -r requirements.txt

@@ -80,8 +80,10 @@ first call is free and covers what you'd actually pay.
 
 **Contact:** Ceyhun Olcan
 **ORCID:** [0000-0002-6326-6071](https://orcid.org/0000-0002-6326-6071)
-**Email:** *[ADD YOUR PREFERRED CONTACT EMAIL BEFORE PUSHING]*
-**GitHub:** open a [licensing inquiry issue](../../issues/new?template=licensing_inquiry.md)
+**Primary email:** ceyhunolcan23@gmail.com
+**Academic email:** ceyhun.olcan.27@dartmouth.edu
+**GitHub:** [@ceyhunolcan](https://github.com/ceyhunolcan)
+— or open a [licensing inquiry issue](../../issues/new?template=licensing_inquiry.md)
 (non-sensitive scoping only — keep deal-specific terms to email)
 
 Subject line: `Aegis license inquiry — [your org]`

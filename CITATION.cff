@@ -7,13 +7,14 @@ type: software
 authors:
   - given-names: Ceyhun
     family-names: Olcan
+    email: ceyhunolcan23@gmail.com
     orcid: "https://orcid.org/0000-0002-6326-6071"
     affiliation: >
       Thayer School of Engineering and Center for Technology and
       Behavioral Health, Dartmouth College
 version: "2.0.0"
 date-released: 2026-05-14
-repository-code: "https://github.com/CeyhunOlcan/aegis-controlrisk-v2"
+repository-code: "https://github.com/ceyhunolcan/aegis-controlrisk-v2"
 license: "LicenseRef-Aegis-Proprietary"
 abstract: >
   Aegis ControlRisk OS is a 32-step activism risk and shareholder

@@ -1,6 +1,6 @@
 # Aegis ControlRisk OS v2
 
-[![CI](https://github.com/CeyhunOlcan/aegis-controlrisk-v2/actions/workflows/ci.yml/badge.svg)](https://github.com/CeyhunOlcan/aegis-controlrisk-v2/actions/workflows/ci.yml)
+[![CI](https://github.com/ceyhunolcan/aegis-controlrisk-v2/actions/workflows/ci.yml/badge.svg)](https://github.com/ceyhunolcan/aegis-controlrisk-v2/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: Proprietary](https://img.shields.io/badge/license-Proprietary-orange.svg)](LICENSE)
 [![Commercial use: License required](https://img.shields.io/badge/commercial%20use-license%20required-red.svg)](COMMERCIAL.md)
@@ -30,7 +30,7 @@ have the simulation layer.
 ## Quick start (evaluation only)
 
 ```bash
-git clone https://github.com/CeyhunOlcan/aegis-controlrisk-v2.git
+git clone https://github.com/ceyhunolcan/aegis-controlrisk-v2.git
 cd aegis-controlrisk-v2
 pip install -r requirements.txt
 make check          # runs smoke + 71 tests + 31 bug checks (~5s total)
@@ -348,7 +348,7 @@ If you reference this software in academic, research, evaluation, or
 commercial-pitch contexts, please cite as:
 
 > Olcan, C. (2026). *Aegis ControlRisk OS* (Version 2.0.0)
-> [Computer software]. https://github.com/CeyhunOlcan/aegis-controlrisk-v2
+> [Computer software]. https://github.com/ceyhunolcan/aegis-controlrisk-v2
 
 GitHub renders a citation block from [CITATION.cff](CITATION.cff)
 automatically; click "Cite this repository" on the repo page for BibTeX
