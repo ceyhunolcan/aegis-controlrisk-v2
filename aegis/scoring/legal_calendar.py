@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Legal calendar + structural defense analysis. The "how feasible is this
 # attack, even if everything else points to it" check. A controlled
 # dual-class company can be the most vulnerable target in the model on

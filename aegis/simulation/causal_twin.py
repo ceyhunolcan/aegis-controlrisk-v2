@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # "Causal twin": apply a set of defense actions to the baseline model state
 # and predict the resulting shifts. The deltas in ACTION_EFFECTS are tuned
 # from a mix of literature and gut feel - happy to take feedback on them.

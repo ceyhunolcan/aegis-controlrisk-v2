@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Fixability = "if an activist tried to fix this, how reasonable would it
 # actually be?" High vulnerability + high fixability = the dream target.
 # High vuln but low fix = a value trap (the activist gets in, can't move

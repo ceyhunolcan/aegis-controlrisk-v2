@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Shadow report for ISS / Glass Lewis. We don't have access to their actual
 # models obviously, but we can approximate the published rubrics: governance
 # weight, performance vs peers, board composition concerns, and pay

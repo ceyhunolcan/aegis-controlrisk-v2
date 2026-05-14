@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Probability-weighted stock reaction. Six discrete scenarios (announcement,
 # preemptive defense, settle 1 seat, settle 2 seats, full defense, strategic
 # review), each with a baseline 1-day reaction and a volatility band. Output

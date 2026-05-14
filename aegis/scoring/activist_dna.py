@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Activist DNA matching. Given a target, rank the eight archetypes by how
 # well they fit. The fit blend was tuned empirically against historical
 # campaigns - market cap fit matters more than you'd think (most activists

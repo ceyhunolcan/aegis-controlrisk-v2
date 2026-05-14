@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Bank-mandate opportunity scorer. The same picture as the activism risk
 # score, but read from the sell-side coverage banker's perspective: which
 # at-risk clients are most likely to *need* an advisor in the next 12m,

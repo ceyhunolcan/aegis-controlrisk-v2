@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Active-trigger detection. Sweeps recent events + calendar pressure and
 # produces a 0-100 score with a discrete urgency level. Real-world this
 # would be wired to a news feed; here we read the events CSV.

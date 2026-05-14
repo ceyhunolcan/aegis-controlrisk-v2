@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Counterfactual defense optimizer. The catalogue of 12 named actions
 # the board can take, plus a greedy selector that builds a defense package
 # under a max-actions constraint.

@@ -1,96 +1,178 @@
-Aegis ControlRisk OS — Proprietary License
+Aegis ControlRisk OS — Proprietary Source-Available License
+============================================================
+
 Copyright (c) 2026. All rights reserved.
 
-================================================================================
+This license governs use of the Aegis ControlRisk OS software and all
+accompanying materials in this repository (collectively, the "Software").
+By accessing, downloading, viewing, or interacting with the Software in
+any way, you agree to the terms below.
 
-This software, including its source code, documentation, data schemas,
-models, scoring methodologies, and accompanying materials (collectively,
-the "Software"), is proprietary and confidential. The Software is made
-available for **viewing and evaluation purposes only**.
+The Software is made publicly viewable on a "source-available" basis. It
+is NOT open source. It is NOT free software. The grants below are
+narrow; everything not explicitly granted is reserved.
 
-================================================================================
 
-1. WHAT YOU MAY DO
+1. PERMITTED USE
+-----------------
 
-   - Read the source code.
-   - Clone or fork this repository on GitHub for the sole purpose of
-     reviewing the code, learning from it, or evaluating whether to
-     license the Software.
-   - Submit pull requests or issues to the upstream repository, in
-     which case you grant the copyright holder a perpetual, royalty-
-     free, worldwide license to incorporate your contribution.
+Subject to the conditions in Sections 2-4, you are granted a limited,
+non-exclusive, non-transferable, non-sublicensable, revocable right to:
 
-2. WHAT YOU MAY NOT DO WITHOUT A WRITTEN LICENSE
+   (a) View the source code on GitHub or other public mirror controlled
+       by the copyright holder, solely for the purpose of evaluation,
+       code review, academic study, or security research.
 
-   Without an explicit, written, signed license agreement from the
-   copyright holder, you may NOT:
+   (b) Clone or download the Software for the sole purpose of running
+       it locally in a personal, non-commercial, non-production setting
+       to evaluate whether you wish to obtain a commercial license.
 
-   - Use the Software in production, commercial, or revenue-generating
-     contexts of any kind.
-   - Deploy the Software internally at any organization, for-profit or
-     non-profit.
-   - Run the Software against real (non-synthetic) data.
-   - Offer the Software, or any derivative work, as a service (SaaS,
-     hosted offering, API, consulting deliverable, or otherwise).
-   - Redistribute the Software, modified or unmodified, in source or
-     binary form.
-   - Sublicense, sell, lease, rent, or otherwise transfer rights to the
-     Software.
-   - Remove or alter any copyright notices, trademarks, or attribution.
-   - Use the methodology, scoring weights, or model design described
-     herein to build a competing product.
+   (c) Submit pull requests, bug reports, and other contributions back
+       to the project, provided that you grant the copyright holder a
+       perpetual, irrevocable, royalty-free license to use your
+       contribution under any license terms the copyright holder
+       chooses, including incorporation into commercial offerings.
 
-3. RESEARCH AND EDUCATION EXCEPTION
 
-   Academic researchers, students, and educators may use the Software
-   for non-commercial research, classroom instruction, and personal
-   learning, provided that:
+2. PROHIBITED USE
+------------------
 
-   - Any published work referencing the Software cites it appropriately.
-   - No commercial product, service, or consulting engagement results
-     from such use.
-   - The use does not involve real (non-synthetic) data covering
-     identifiable companies or persons.
+Without prior written permission from the copyright holder, you may NOT:
 
-   If you are unsure whether your use qualifies, ask first.
+   (a) Use the Software, in whole or in part, in any commercial,
+       revenue-generating, internal business, internal tooling,
+       consulting, or client-deliverable context.
 
-4. GETTING A COMMERCIAL LICENSE
+   (b) Run the Software in production or any environment that produces
+       outputs relied upon by paying customers, internal stakeholders,
+       boards of directors, or regulatory bodies.
 
-   Commercial licensing is available. Pricing depends on use case
-   (internal tooling vs. embedded in a product vs. SaaS resale), number
-   of seats, and support level. See `COMMERCIAL.md` in this repository
-   for the contact path.
+   (c) Distribute, sublicense, sell, rent, lease, lend, or otherwise
+       transfer the Software or any derivative work to any third party.
 
-5. NO WARRANTY
+   (d) Create derivative works for commercial distribution, including
+       SaaS offerings, hosted services, API products, or repackaged
+       analytical tools.
 
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
-   NONINFRINGEMENT.
+   (e) Use the Software, the scoring methodology, the model weights,
+       the claim graph design, the Monte Carlo formulation, the
+       settlement game-theory utility model, the activist DNA matching
+       method, or any other proprietary analytical component to build
+       a competing or substantially similar product.
 
-   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-   CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN
-   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-   SOFTWARE.
+   (f) Remove, alter, or obscure any copyright notice, license notice,
+       attribution, or this LICENSE file from any copy of the Software.
 
-6. NOT LEGAL OR FINANCIAL ADVICE
+   (g) Use the Software's name, marks, or any confusingly similar
+       terms in your own product names or marketing without written
+       permission.
 
-   The Software is a model. It is not legal, financial, or investment
-   advice. Outputs must be validated against appropriate expertise
-   before any decision is made.
+   (h) Use the Software for any unlawful purpose, including but not
+       limited to market manipulation, securities fraud, insider
+       trading, or unauthorized access to non-public information.
 
-7. TERMINATION
 
-   This license terminates automatically if you breach any of its
-   terms. Upon termination, you must immediately cease all use of the
-   Software and destroy any copies in your possession.
+3. NO WARRANTY; NOT ADVICE
+---------------------------
 
-8. GOVERNING LAW
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND
+NON-INFRINGEMENT.
 
-   This license is governed by the laws of the jurisdiction in which
-   the copyright holder is domiciled, without regard to its conflict
-   of laws principles.
+The Software is an analytical model. It is NOT legal advice, NOT
+financial advice, NOT investment advice, NOT a recommendation to buy,
+sell, or hold any security, and NOT a substitute for professional
+judgment by qualified counsel, financial advisors, or fiduciaries.
+Outputs of the Software may be incomplete, inaccurate, or based on
+synthetic data. Reliance on the Software's outputs without
+independent verification is at the user's sole risk.
 
-================================================================================
 
-Questions about this license? See `COMMERCIAL.md` for the contact path.
+4. LIMITATION OF LIABILITY
+---------------------------
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL,
+OR PUNITIVE DAMAGES (INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS,
+LOSS OF DATA, LOSS OF BUSINESS, OR REGULATORY PENALTIES), HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, ARISING IN ANY WAY OUT OF THE
+USE OR INABILITY TO USE THE SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+
+5. COMMERCIAL LICENSING
+-------------------------
+
+A commercial license is available for organizations and individuals
+who wish to use the Software in any of the contexts prohibited in
+Section 2. See COMMERCIAL.md for inquiry and pricing information.
+
+Commercial licenses are negotiated case-by-case and may include:
+deployment rights, support, indemnification, customization,
+white-labeling, and source code escrow.
+
+
+5A. RESEARCH AND EDUCATION EXCEPTION
+-------------------------------------
+
+Notwithstanding Section 2, the following uses are permitted without a
+commercial license, provided that no fee is charged for access to the
+resulting work and any published outputs cite this Software:
+
+   (a) Use by accredited academic institutions for non-commercial
+       research, classroom teaching, or thesis work.
+
+   (b) Use by independent security researchers to identify and
+       responsibly disclose vulnerabilities (see SECURITY.md).
+
+   (c) Use in published academic papers, with proper citation, for
+       reproducibility of reported results.
+
+This exception does NOT extend to:
+   - Industry-sponsored research with deliverables to a sponsor
+   - Consulting work performed by academics
+   - Use of real (non-synthetic) company data
+   - Any output incorporated into commercial products or services
+
+
+6. TERMINATION
+----------------
+
+The rights granted in Section 1 terminate automatically and
+immediately upon any breach of Section 2. Upon termination, you must
+cease all use of the Software and destroy all copies in your
+possession or control.
+
+The copyright holder may also terminate the rights granted in
+Section 1 at its sole discretion, at any time, for any reason,
+including without notice.
+
+Sections 3, 4, and 7 survive termination.
+
+
+7. GOVERNING LAW
+------------------
+
+This license is governed by the laws of the jurisdiction in which the
+copyright holder is domiciled, without regard to its conflict-of-laws
+principles. Any dispute arising out of or relating to this license
+shall be resolved exclusively in the state or federal courts of that
+jurisdiction, and you consent to personal jurisdiction therein.
+
+
+8. ENTIRE AGREEMENT
+---------------------
+
+This license constitutes the entire agreement between you and the
+copyright holder with respect to your non-commercial use of the
+Software. It supersedes any prior or contemporaneous agreements,
+representations, or understandings. No amendment to this license is
+binding unless in writing and signed by the copyright holder.
+
+
+---
+
+For commercial licensing, partnership inquiries, or any use not
+permitted under Section 1, see COMMERCIAL.md or open an issue
+labeled "licensing".

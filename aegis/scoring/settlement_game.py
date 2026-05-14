@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Settle-vs-fight game. Eight discrete options on the continuum from "fight
 # all the way to a vote" to "hand over the board". Each gets scored on a
 # utility function blending risk reduction, shareholder acceptance, board

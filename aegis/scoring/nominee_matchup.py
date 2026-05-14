@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Nominee profile library + matchup scoring. Given the current board and
 # the dominant thesis, pick the activist's best three nominees from the
 # library and predict head-to-head win probability against incumbents.

@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Builds the activist claim DAG. Each claim is a (text, type, scoring) tuple
 # wired together so we can rank them by power (evidence × resonance × simplicity
 # - rebuttability) and surface the top-N for memo writing.

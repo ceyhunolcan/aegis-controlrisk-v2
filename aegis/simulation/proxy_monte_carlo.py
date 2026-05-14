@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Proxy contest Monte Carlo. Given a coalition + PA stance + defense strength,
 # sample N=10000 votes and roll up the distribution of outcomes (settlement /
 # vote / strategic review). Seeded - same inputs always produce same probs.

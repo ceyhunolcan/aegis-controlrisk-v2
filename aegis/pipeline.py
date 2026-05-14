@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # The central orchestrator. Every consumer - the Streamlit app, smoke test,
 # memo writer, backtest, unit tests - calls run_company_analysis() and reads
 # from the dict it returns. Adding a new view = adding a new consumer, not a

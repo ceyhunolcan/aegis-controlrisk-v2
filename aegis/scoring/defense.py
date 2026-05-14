@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Management defense readiness. Mirror of vulnerability - same picture from
 # the other side of the table. Evidence rebuttability is the largest weight
 # because in proxy fights the most damaging claims are ones with paper

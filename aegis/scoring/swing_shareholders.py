@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Swing-shareholder scoring. Not every holder is worth a call from IR -
 # index funds vote with PA, founders vote with management, activists vote
 # with the activist. What matters is the *uncertain* holders weighted by

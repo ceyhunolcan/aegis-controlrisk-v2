@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # The headline number. Combines vulnerability + control-loss probability
 # + settlement pressure into a single 0-100 figure, then maps to a level.
 # Two ways to escalate: composite >= threshold, OR both event-prob and

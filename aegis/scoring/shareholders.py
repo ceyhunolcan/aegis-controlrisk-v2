@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Shareholder coalition modeling. Builds a directed graph of holders + their
 # priors, applies thesis-specific adjustments, and aggregates into an
 # expected activist / management / abstain vote split.

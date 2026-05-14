@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Director replaceability scoring. Nine components weighted to surface "which
 # director is the activist most likely to target, and why" - tenure-excess +
 # low-vote history + committee-chair exposure are the dominant signals in

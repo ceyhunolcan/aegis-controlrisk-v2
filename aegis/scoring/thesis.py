@@ -1,3 +1,4 @@
+# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
 # Thesis generation. Produces 8 candidate activist theses (board refresh,
 # margin improvement, breakup, comp alignment, climate/transition, CEO
 # succession, M&A discipline, balance sheet), scores each on 8 weighted
