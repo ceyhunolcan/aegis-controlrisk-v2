@@ -300,10 +300,20 @@ def test_unknown_source_raises():
 
 
 def test_stub_sources_raise_not_implemented():
-    from aegis.ingest.sources import EDGARSource, BloombergSource, ISSSource
-    for source_cls in (EDGARSource, BloombergSource, ISSSource):
+    # EDGAR is now a real implementation - only Bloomberg and ISS remain
+    # stubs awaiting paid-vendor integration.
+    from aegis.ingest.sources import BloombergSource, ISSSource
+    for source_cls in (BloombergSource, ISSSource):
         with pytest.raises(NotImplementedError):
             source_cls().load_all()
+
+
+def test_edgar_source_needs_tickers():
+    # EDGARSource's load_all() requires explicit tickers - the EDGAR API
+    # doesn't have a "give me everything" mode like the synthetic source.
+    from aegis.ingest.sources import EDGARSource
+    with pytest.raises(ValueError):
+        EDGARSource().load_all()
 
 
 # Executive view ---------------------------------------------------------

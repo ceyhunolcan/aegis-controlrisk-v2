@@ -10,6 +10,7 @@
 #
 # When you implement a real source, register it in SOURCES below.
 from ..data.loader import load_all_data
+from .edgar import EDGARSource  # real implementation lives in edgar.py
 
 
 class SyntheticSource:
@@ -19,20 +20,6 @@ class SyntheticSource:
 
     def load_all(self, data_dir="data"):
         return load_all_data(data_dir)
-
-
-class EDGARSource:
-    """SEC EDGAR. STUB - implement when real data lands."""
-
-    name = "edgar"
-
-    def load_all(self, data_dir=None):
-        # TODO: pull 13D/13G filings, DEF 14A proxy statements, 8-Ks
-        # See https://www.sec.gov/edgar/sec-api-documentation
-        raise NotImplementedError(
-            "EDGAR ingest not yet implemented. See docs/ingest.md for the "
-            "expected DataFrame schema each loader must return."
-        )
 
 
 class BloombergSource:

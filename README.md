@@ -179,6 +179,52 @@ question view modules.
 python -m aegis.backtesting.backtest_runner
 ```
 
+### Running on real SEC EDGAR data
+
+The pipeline ships with a working EDGAR ingest. Pull live data for any
+US public company in one command:
+
+```
+python aegis_cli.py fetch \
+    --tickers AAPL,MSFT,GOOGL \
+    --user-agent "Your Name your@email.com" \
+    --output-dir data_edgar
+```
+
+SEC requires a User-Agent with your real email — they throttle anonymous
+traffic. The fetcher caches every response to `.edgar_cache/`, so a
+second run on the same tickers is nearly instant.
+
+Then run the pipeline against the real data:
+
+```
+python aegis_cli.py --data-dir data_edgar analyze AAPL
+streamlit run app.py
+```
+
+What the EDGAR source populates today:
+- **companies** — name, sector (from SIC code), exchange, fiscal year end
+- **events** — material 8-K filings classified by Item code (5.02
+  officer change, 4.02 restatement, 2.06 impairment, etc.) with
+  severity scores
+- **ownership** — top institutional holders (placeholder for now;
+  real 13F aggregation across many filers is the next step)
+- **financials** — XBRL existence check; vs-peer multiples need a
+  price feed (Yahoo / Polygon)
+- **directors** — placeholder (DEF 14A HTML parsing is a separate
+  module)
+
+What still needs a paid vendor:
+- **campaigns** + **activist_archetypes** — Insightia / SharkRepellent
+- **proxy_advisor_cases** — ISS DataDesk / Glass Lewis
+- vs-peer financial multiples — Bloomberg / FactSet (or a free price
+  feed + manual peer assignment)
+
+The pipeline is tolerant of missing tables; vendor-only fields fall
+back to neutral defaults. So you can get real EDGAR data working
+end-to-end today, with the paid integrations as future upgrades. See
+[DATA.md](DATA.md) for the full data acquisition plan.
+
 ## How CASCADE-2 fits together
 
 One function is the entry point: `aegis.pipeline.run_company_analysis(company_id, data)`.

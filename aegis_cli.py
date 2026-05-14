@@ -192,6 +192,48 @@ def cmd_alerts(args):
     return 0
 
 
+def cmd_fetch(args):
+    """Pull real EDGAR data for one or more tickers and write CSVs."""
+    from aegis.ingest.edgar import fetch_tickers
+
+    tickers = [t.strip().upper() for t in args.tickers.split(",") if t.strip()]
+    if not tickers:
+        print("Provide at least one ticker via --tickers AAPL,MSFT,GOOGL",
+              file=sys.stderr)
+        return 1
+
+    if not args.user_agent or "@" not in args.user_agent:
+        print("SEC requires a real User-Agent with your email. "
+              "Use --user-agent 'Your Name your@email.com'", file=sys.stderr)
+        return 1
+
+    print(f"Fetching EDGAR data for {len(tickers)} ticker(s): "
+          f"{', '.join(tickers)}")
+    print(f"Output: {args.output_dir}")
+    print(f"Cache:  .edgar_cache/ (re-runs are nearly instant)")
+    print()
+
+    try:
+        data = fetch_tickers(
+            tickers,
+            user_agent=args.user_agent,
+            output_dir=args.output_dir,
+        )
+    except Exception as e:
+        print(f"Fetch failed: {type(e).__name__}: {e}", file=sys.stderr)
+        return 2
+
+    print()
+    print("Summary:")
+    for key, df in data.items():
+        print(f"  {key:25s} {len(df):4d} rows")
+    print()
+    print(f"To run the pipeline against this data:")
+    print(f"  python aegis_cli.py --data-dir {args.output_dir} "
+          f"analyze {tickers[0]}")
+    return 0
+
+
 def build_parser():
     p = argparse.ArgumentParser(prog="aegis", description="Aegis ControlRisk CLI")
     p.add_argument("--data-dir", default="data",
@@ -234,6 +276,16 @@ def build_parser():
     al.add_argument("--min-severity", default="moderate",
                     choices=["info", "moderate", "high", "critical"])
     al.set_defaults(func=cmd_alerts)
+
+    f = sub.add_parser("fetch",
+                       help="pull real data from SEC EDGAR for given tickers")
+    f.add_argument("--tickers", required=True,
+                   help="comma-separated list, e.g. AAPL,MSFT,GOOGL")
+    f.add_argument("--user-agent", required=True,
+                   help="SEC requires 'Your Name your@email.com'")
+    f.add_argument("--output-dir", default="data_edgar",
+                   help="where to write CSVs (default: data_edgar/)")
+    f.set_defaults(func=cmd_fetch)
 
     return p
 
