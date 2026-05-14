@@ -291,4 +291,16 @@ def run_company_analysis(company_id, data, as_of_date=None):
     except Exception:
         pass
 
+    # Full distribution / worst-case analytics. The simulation engine
+    # holds the raw sample arrays; we expose distribution summaries and
+    # worst-case messaging here so the executive view and the board memo
+    # can both reference uncertainty.
+    try:
+        from .simulation.distributions import worst_case_summary
+        seats_samples = simulation_refined.get("_seats_lost_samples")
+        if seats_samples is not None:
+            analysis["worst_case"] = worst_case_summary(seats_samples)
+    except Exception:
+        pass
+
     return analysis

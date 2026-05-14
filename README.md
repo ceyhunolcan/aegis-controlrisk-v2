@@ -22,10 +22,38 @@ analytics engine. Pick a ticker, get back a 0-100 risk score, a
 12-month event probability, the most likely activist thesis,
 board-level vulnerability, a Monte Carlo proxy contest simulation, a
 settle-vs-fight recommendation, and a 15-section board memo.
-Everything runs locally against a synthetic dataset; no paid APIs.
 
 The engine is called CASCADE-2. The "2" is mostly because v1 didn't
 have the simulation layer.
+
+## What makes this different from $30K/yr platforms
+
+Most existing activism risk tools (Insightia, ISS Risk Metrics,
+SharkRepellent) produce a single point-estimate score, charge $15-50K
+per seat per year, and don't show their methodology. Aegis does five
+things they don't:
+
+1. **Full uncertainty distributions, not point estimates.** Every
+   probability output ships with bootstrap confidence intervals and a
+   worst-plausible-case (95th percentile) seat-loss summary. Boards
+   care about the tail risk, not the mean.
+
+2. **Curated activist archetype database.** 15+ real major activists
+   (Elliott, Trian, Starboard, ValueAct, JANA, Engine #1, etc.) with
+   AUM, signature tactics, preferred target profiles, and recent
+   campaign histories baked into the matcher.
+
+3. **Universe scanner mode.** Rank an arbitrary list of companies by
+   vulnerability in one command. Sector heatmaps. Historical
+   backtesting against known 13D filings.
+
+4. **Auditable provenance for every score.** Every output ships with
+   the components, weights, inputs, and data sources that produced
+   it. Reviewable by a board attorney; reproducible across re-runs.
+
+5. **Source-available.** You can read the code, audit the
+   methodology, fork it, run it locally, and never wire your
+   sensitive deal data through someone else's cloud.
 
 ## Quick start (evaluation only)
 
@@ -131,6 +159,19 @@ python aegis_cli.py snapshot save INDC --note "Q3 close"
 python aegis_cli.py snapshot list
 python aegis_cli.py snapshot diff <id_old> <id_new>
 python aegis_cli.py alerts INDC --min-severity high
+
+# Universe scanner — rank everyone in the data dir by vulnerability
+python aegis_cli.py scan --top 10 --heatmap
+python aegis_cli.py scan --min-risk High --markdown
+
+# Real EDGAR fetch (works on any US public company)
+python aegis_cli.py fetch --tickers AAPL,MSFT,DIS \
+    --user-agent "Your Name your@email.com" \
+    --with-yahoo            # also pull peer-relative fundamentals
+
+# Historical backtest against known activist campaigns
+python aegis_cli.py backtest --detail
+python aegis_cli.py backtest --tickers DIS,XOM,PYPL --detail
 ```
 
 Designed for cron jobs and CI pipelines. Exit codes: 0 success,

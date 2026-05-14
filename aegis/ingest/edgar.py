@@ -591,18 +591,15 @@ def fetch_tickers(tickers, user_agent=None, output_dir=None):
         output_dir.mkdir(parents=True, exist_ok=True)
         # Write every key, including empty ones, so the loader doesn't
         # regenerate synthetic data on top of our EDGAR pull.
+        # We also slot in the real activist archetypes here so the
+        # pipeline's DNA matcher has something to work with.
+        from .activists import build_archetypes_df
+
         empty_schemas = {
             "campaigns": ["company_id", "campaign_id", "activist_name",
                           "thesis_type", "campaign_start_date",
                           "board_seats_won", "settled", "went_to_vote",
                           "outcome", "stock_reaction_30d"],
-            "activist_archetypes": ["archetype_id", "name", "aum_usd",
-                                    "typical_stake_pct",
-                                    "typical_seats_requested",
-                                    "preferred_market_cap_min",
-                                    "preferred_market_cap_max",
-                                    "preferred_thesis_types",
-                                    "campaign_style"],
             "proxy_advisor_cases": ["case_id", "company_id", "year",
                                     "iss_recommendation",
                                     "gl_recommendation",
@@ -610,7 +607,11 @@ def fetch_tickers(tickers, user_agent=None, output_dir=None):
                                     "pay_concerns"],
         }
         for key, df in data.items():
-            if df.empty and key in empty_schemas:
+            if key == "activist_archetypes":
+                # Substitute the real curated archetypes
+                df = build_archetypes_df()
+                data[key] = df
+            elif df.empty and key in empty_schemas:
                 df = pd.DataFrame(columns=empty_schemas[key])
             path = output_dir / f"sample_{key}.csv"
             df.to_csv(path, index=False)

@@ -241,6 +241,11 @@ def run_proxy_monte_carlo(
         "p25_activist_vote_pct": round(float(np.percentile(activist_vote_samples, 25)), 1),
         "median_activist_vote_pct": round(float(np.median(activist_vote_samples)), 1),
         "p75_activist_vote_pct": round(float(np.percentile(activist_vote_samples, 75)), 1),
+        # Raw sample arrays for downstream uncertainty/distribution viz.
+        # Underscore-prefixed so JSON serializers can drop them by convention
+        # if needed. Use .tolist() so JSON encoders work without numpy.
+        "_seats_lost_samples": seats_array.tolist(),
+        "_activist_vote_samples": [float(v) for v in activist_vote_samples],
         "sensitivity": sens,
         "interpretation": interp,
     }

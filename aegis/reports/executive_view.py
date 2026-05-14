@@ -17,6 +17,7 @@ def executive_verdict(analysis):
     final = analysis.get("final_score") or {}
     sim = analysis.get("simulation") or {}
     legal = analysis.get("legal") or {}
+    worst = analysis.get("worst_case") or {}
 
     name = company.get("name", "the company")
     level = final.get("final_risk_level", "—")
@@ -29,11 +30,20 @@ def executive_verdict(analysis):
         urgency = (f" The annual meeting is in {int(days_to_meeting)} days, "
                    f"which compresses the response window.")
 
+    # Add the worst-case message if we have it; this is a distinguishing
+    # feature - most tools never expose worst-plausible-case numbers.
+    worst_note = ""
+    if worst.get("p95_seats_lost") is not None:
+        p95 = worst["p95_seats_lost"]
+        if p95 >= 1:
+            worst_note = (f" Worst-plausible-case (95th percentile): "
+                          f"{p95:.0f} seat(s) lost.")
+
     return (
         f"**{name}** is rated **{level}** for activism risk. "
         f"Modeled 12-month event probability is **{p_event * 100:.0f}%**; "
         f"if a campaign launches, P(activist wins ≥1 seat) is "
-        f"**{p_win * 100:.0f}%**.{urgency}"
+        f"**{p_win * 100:.0f}%**.{urgency}{worst_note}"
     )
 
 

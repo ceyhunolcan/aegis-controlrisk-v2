@@ -193,7 +193,11 @@ def cmd_alerts(args):
 
 
 def cmd_fetch(args):
-    """Pull real EDGAR data for one or more tickers and write CSVs."""
+    """Pull real EDGAR data for one or more tickers and write CSVs.
+
+    If --with-yahoo is set, also enrich with Yahoo Finance peer-relative
+    fundamentals (TSR, multiples, momentum) for production-grade output.
+    """
     from aegis.ingest.edgar import fetch_tickers
 
     tickers = [t.strip().upper() for t in args.tickers.split(",") if t.strip()]
@@ -220,8 +224,27 @@ def cmd_fetch(args):
             output_dir=args.output_dir,
         )
     except Exception as e:
-        print(f"Fetch failed: {type(e).__name__}: {e}", file=sys.stderr)
+        print(f"EDGAR fetch failed: {type(e).__name__}: {e}", file=sys.stderr)
         return 2
+
+    if args.with_yahoo:
+        print()
+        print("Enriching with Yahoo Finance peer-relative fundamentals...")
+        try:
+            from aegis.ingest.yahoo import enrich_data_dict
+            data = enrich_data_dict(data, verbose=True)
+            # rewrite the enriched CSVs
+            from pathlib import Path
+            out = Path(args.output_dir)
+            data["companies"].to_csv(out / "sample_companies.csv", index=False)
+            data["financials"].to_csv(out / "sample_financials.csv", index=False)
+            print("  Yahoo enrichment complete.")
+        except ImportError:
+            print("  yfinance not installed. Skipping Yahoo enrichment.",
+                  file=sys.stderr)
+            print("  Install with: pip install yfinance", file=sys.stderr)
+        except Exception as e:
+            print(f"  Yahoo enrichment failed: {e}", file=sys.stderr)
 
     print()
     print("Summary:")
@@ -232,6 +255,70 @@ def cmd_fetch(args):
     print(f"  python aegis_cli.py --data-dir {args.output_dir} "
           f"analyze {tickers[0]}")
     return 0
+
+
+def cmd_scan(args):
+    """Rank all companies in the data dir by activism vulnerability."""
+    from aegis.data.loader import load_all_data
+    from aegis.scanning import (scan_universe, format_scan_report,
+                                  scan_alerts, heatmap_by_sector)
+
+    data = load_all_data(args.data_dir)
+    n_companies = len(data["companies"])
+    if n_companies == 0:
+        print("No companies in data dir.", file=sys.stderr)
+        return 1
+
+    print(f"Scanning {n_companies} companies in {args.data_dir}...")
+    df = scan_universe(data, top_n=args.top)
+    print()
+
+    if args.min_risk:
+        df = scan_alerts(df, risk_level_min=args.min_risk)
+        print(f"Filtered to risk level >= {args.min_risk} "
+              f"({len(df)} companies)")
+        print()
+
+    fmt = "csv" if args.csv else ("markdown" if args.markdown else "text")
+    print(format_scan_report(df, format_=fmt))
+
+    if args.heatmap:
+        print()
+        print("Sector heatmap:")
+        print(heatmap_by_sector(df).to_string(index=False))
+
+    return 0
+
+
+def cmd_historical(args):
+    """Run the historical campaign backtest."""
+    from aegis.data.loader import load_all_data
+    from aegis.backtesting.historical import (
+        run_historical_backtest, get_campaign_universe,
+    )
+
+    data = load_all_data(args.data_dir)
+    campaigns = get_campaign_universe()
+
+    if args.tickers:
+        wanted = {t.strip().upper() for t in args.tickers.split(",")}
+        campaigns = campaigns[campaigns["ticker"].isin(wanted)]
+
+    print(f"Running historical backtest on {len(campaigns)} campaigns...")
+    result = run_historical_backtest(data, campaigns=campaigns, verbose=True)
+    print()
+    print(result["summary"])
+    print()
+
+    if args.detail:
+        print("Per-campaign results:")
+        cols = ["ticker", "activist", "filing_date", "risk_level",
+                "risk_score", "flagged", "predicted_thesis", "actual_outcome"]
+        df = result["results"]
+        display_cols = [c for c in cols if c in df.columns]
+        print(df[display_cols].to_string(index=False))
+
+    return 0 if result["hit_rate"] >= 0.6 else 1
 
 
 def build_parser():
@@ -285,7 +372,34 @@ def build_parser():
                    help="SEC requires 'Your Name your@email.com'")
     f.add_argument("--output-dir", default="data_edgar",
                    help="where to write CSVs (default: data_edgar/)")
+    f.add_argument("--with-yahoo", action="store_true",
+                   help="also enrich with Yahoo Finance peer-relative "
+                        "fundamentals (TSR, multiples, momentum)")
     f.set_defaults(func=cmd_fetch)
+
+    sc = sub.add_parser("scan",
+                        help="rank all companies in data dir by vulnerability")
+    sc.add_argument("--top", type=int, default=None,
+                    help="only show top-N companies (default: all)")
+    sc.add_argument("--min-risk", default=None,
+                    choices=["Low", "Moderate", "High", "Critical"],
+                    help="filter to companies at or above this risk level")
+    sc.add_argument("--markdown", action="store_true",
+                    help="emit markdown table (default: terminal text)")
+    sc.add_argument("--csv", action="store_true",
+                    help="emit CSV (default: terminal text)")
+    sc.add_argument("--heatmap", action="store_true",
+                    help="also print sector-level aggregation")
+    sc.set_defaults(func=cmd_scan)
+
+    h = sub.add_parser("backtest",
+                       help="run model against historical activist campaigns")
+    h.add_argument("--tickers", default=None,
+                   help="comma-separated subset of tickers to evaluate "
+                        "(default: all known campaigns)")
+    h.add_argument("--detail", action="store_true",
+                   help="show per-campaign result table")
+    h.set_defaults(func=cmd_historical)
 
     return p
 
