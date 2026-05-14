@@ -10,7 +10,10 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [
-  { name = "Aegis ControlRisk contributors" }
+  { name = "Ceyhun Olcan" }
+]
+maintainers = [
+  { name = "Ceyhun Olcan" }
 ]
 keywords = [
   "activism", "shareholder", "governance", "proxy", "risk",
@@ -51,11 +54,11 @@ aegis = "aegis_cli:main"
 
 [project.urls]
 # Update these after pushing to GitHub
-Homepage = "https://github.com/your-org/aegis-controlrisk-v2"
-Documentation = "https://github.com/your-org/aegis-controlrisk-v2#readme"
-Repository = "https://github.com/your-org/aegis-controlrisk-v2"
-Issues = "https://github.com/your-org/aegis-controlrisk-v2/issues"
-Changelog = "https://github.com/your-org/aegis-controlrisk-v2/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/CeyhunOlcan/aegis-controlrisk-v2"
+Documentation = "https://github.com/CeyhunOlcan/aegis-controlrisk-v2#readme"
+Repository = "https://github.com/CeyhunOlcan/aegis-controlrisk-v2"
+Issues = "https://github.com/CeyhunOlcan/aegis-controlrisk-v2/issues"
+Changelog = "https://github.com/CeyhunOlcan/aegis-controlrisk-v2/blob/main/CHANGELOG.md"
 
 [tool.setuptools]
 # Include the CLI as a top-level module + the aegis package

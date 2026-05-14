@@ -1,10 +1,12 @@
-# Copyright (c) 2026. All rights reserved. Proprietary. See LICENSE.
+# Copyright (c) 2026 Ceyhun Olcan (ORCID 0000-0002-6326-6071).
+# All rights reserved. Proprietary. See LICENSE.
+#
 # The central orchestrator. Every consumer - the Streamlit app, smoke test,
 # memo writer, backtest, unit tests - calls run_company_analysis() and reads
 # from the dict it returns. Adding a new view = adding a new consumer, not a
 # new entry point.
 #
-# CASCADE-2 pipeline architecture is proprietary IP. Copyright (c) 2026.
+# CASCADE-2 pipeline architecture is proprietary IP.
 # Source-available under a proprietary license. See LICENSE / COMMERCIAL.md.
 #
 # The pipeline runs ~32 steps in a specific order. The non-obvious dependency:

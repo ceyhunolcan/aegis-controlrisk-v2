@@ -1,7 +1,8 @@
 # Aegis CLI. The dashboard is great for browsing, but for cron jobs, CI
 # pipelines, or scripted workflows you want a plain command-line tool.
 #
-# Aegis ControlRisk OS — Copyright (c) 2026. All rights reserved.
+# Aegis ControlRisk OS — Copyright (c) 2026 Ceyhun Olcan.
+# ORCID: 0000-0002-6326-6071. All rights reserved.
 # Source-available under a proprietary license. See LICENSE / COMMERCIAL.md.
 #
 # Usage:

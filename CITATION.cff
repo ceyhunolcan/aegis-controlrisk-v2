@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "Aegis ControlRisk OS"
+message: >
+  If you reference this software in academic, research, or commercial
+  evaluation contexts, please cite it as below.
+type: software
+authors:
+  - given-names: Ceyhun
+    family-names: Olcan
+    orcid: "https://orcid.org/0000-0002-6326-6071"
+    affiliation: >
+      Thayer School of Engineering and Center for Technology and
+      Behavioral Health, Dartmouth College
+version: "2.0.0"
+date-released: 2026-05-14
+repository-code: "https://github.com/CeyhunOlcan/aegis-controlrisk-v2"
+license: "LicenseRef-Aegis-Proprietary"
+abstract: >
+  Aegis ControlRisk OS is a 32-step activism risk and shareholder
+  defense analytics engine (CASCADE-2). It produces a 0-100 risk score,
+  a 12-month event probability, a most-likely activist thesis, a board
+  vulnerability map, a Monte Carlo proxy contest simulation, a
+  settle-vs-fight game-theory recommendation, and a 15-section board
+  briefing memo for any target company. The MVP runs locally on
+  synthetic data; the ingest layer is wired for EDGAR, Bloomberg, ISS
+  Voting Analytics, and FactSet/SharkRepellent in production.
+keywords:
+  - shareholder activism
+  - corporate governance
+  - proxy contest
+  - monte carlo simulation
+  - board vulnerability
+  - settlement game theory
+  - risk analytics

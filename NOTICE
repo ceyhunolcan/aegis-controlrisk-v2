@@ -1,7 +1,18 @@
 Aegis ControlRisk OS
 ====================
 
-Copyright (c) 2026. All rights reserved.
+Copyright (c) 2026 Ceyhun Olcan. All rights reserved.
+
+Author:  Ceyhun Olcan
+ORCID:   https://orcid.org/0000-0002-6326-6071
+Affil:   Thayer School of Engineering, Dartmouth College
+         Center for Technology and Behavioral Health, Dartmouth College
+
+(Affiliation listed for identification only. Aegis ControlRisk OS is
+the author's independent intellectual property and is not a Dartmouth
+work-for-hire, sponsored research deliverable, or institutional product.
+Dartmouth makes no representation regarding, and has no rights in,
+this software.)
 
 This software, including its source code, documentation, models, scoring
 methodologies, weights, claim-graph design, Monte Carlo simulation
