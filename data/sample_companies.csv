@@ -1,0 +1,8 @@
+company_id,ticker,name,sector,industry,market_cap,enterprise_value,country,exchange,controlled_company_flag,dual_class_flag,insider_ownership_pct,annual_meeting_date,nomination_deadline,fiscal_year_end,has_poison_pill,classified_board,ceo_chair_combined,majority_voting_standard
+ORCX,ORCX,Oracle Resources Corp,Energy,Integrated Oil & Gas,285000000000,320000000000,United States,NYSE,False,False,1.2,2026-08-16,2026-06-17,12-31,False,False,True,True
+INDC,INDC,Industrial Diversified Corp,Industrials,Diversified Industrials,18400000000,26100000000,United States,NYSE,False,False,2.4,2026-07-22,2026-06-02,12-31,False,True,True,False
+NVTC,NVTC,Novatech Cloud Systems,Technology,Enterprise Software,92500000000,85000000000,United States,NASDAQ,False,False,3.1,2026-09-30,2026-08-06,06-30,False,False,False,True
+MDCO,MDCO,Meridian Media Holdings,Communication Services,Media & Entertainment,14200000000,21500000000,United States,NYSE,True,True,38.0,2026-07-12,2026-05-28,12-31,True,True,True,False
+RETR,RETR,Retailia Stores Inc,Retail,Specialty Retail,6800000000,9300000000,United States,NYSE,False,False,4.7,2026-07-02,2026-05-23,01-31,False,False,True,True
+HMED,HMED,Helix Medical Devices,Healthcare,Medical Devices,11900000000,13400000000,United States,NYSE,False,False,5.2,2026-08-31,2026-07-07,12-31,False,False,False,True
+CBNK,CBNK,Capital Bridge Bancorp,Financials,Regional Banks,22300000000,24800000000,United States,NYSE,False,False,2.8,2026-08-01,2026-06-07,12-31,False,False,False,True

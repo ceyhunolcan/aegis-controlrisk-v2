@@ -1,0 +1,16 @@
+case_id,context,outcome,weight
+PA001,"Director tenure>15y, audit chair, TSR -25% 3y",AGAINST director,0.85
+PA002,"Say-on-pay support 71%, no comp reform",AGAINST pay,0.9
+PA003,Activist nominee with capital allocation track record,FOR 1 activist nominee,0.7
+PA004,Dual-class with no sunset; underperforming,AGAINST governance; AGAINST CEO/chair,0.8
+PA005,"Outperforming tech firm, full board recommended",FOR all management nominees,0.95
+PA006,"Long-tenured comp chair, low SoP, expanded grants",AGAINST comp chair,0.88
+PA007,"Energy company, no climate-expert director, TSR-lag",FOR transition-expert activist nominee,0.65
+PA008,Healthcare; M&A writeoffs; activist asks for strategic review,FOR strategic review committee,0.72
+PA009,"Industrial; persistent guidance misses, breakup thesis credible",FOR 2 activist nominees,0.78
+PA010,"Retail; weak margins, activist wants comp + ops reform",FOR 1 activist nominee; AGAINST pay,0.74
+PA011,"Bank; governance solid, narrow underperformance",FOR all management nominees,0.8
+PA012,Media; controlled; activist publicly critical,AGAINST 2 long-tenured directors (limited practical effect),0.55
+PA013,Classified board obstructs activist; activist sues,FOR declassification proposal,0.82
+PA014,Activist nominee with weaker resume than incumbents,AGAINST activist nominee,0.7
+PA015,Company adopts ROIC/FCF comp metric pre-vote,FOR pay; FOR comp chair,0.83

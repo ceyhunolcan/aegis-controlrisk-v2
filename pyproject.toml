@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegis-controlrisk"
+version = "2.0.0"
+description = "Activism risk + shareholder defense analytics engine"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Aegis ControlRisk contributors" }
+]
+keywords = [
+  "activism", "shareholder", "governance", "proxy", "risk",
+  "analytics", "monte-carlo"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "networkx>=3.0",
+  "scipy>=1.10",
+  "plotly>=5.0",
+  "streamlit>=1.28",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "ruff>=0.1",
+]
+schemas = [
+  "pydantic>=2.0",   # optional - schemas.py degrades gracefully without it
+]
+
+[project.scripts]
+aegis = "aegis_cli:main"
+
+[project.urls]
+# Update these after pushing to GitHub
+Homepage = "https://github.com/your-org/aegis-controlrisk-v2"
+Documentation = "https://github.com/your-org/aegis-controlrisk-v2#readme"
+Repository = "https://github.com/your-org/aegis-controlrisk-v2"
+Issues = "https://github.com/your-org/aegis-controlrisk-v2/issues"
+Changelog = "https://github.com/your-org/aegis-controlrisk-v2/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+# Include the CLI as a top-level module + the aegis package
+py-modules = ["aegis_cli", "app", "config", "smoke_test", "bug_test", "run_tests"]
+packages = ["aegis"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aegis*"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+  ".venv",
+  "build",
+  "dist",
+  "__pycache__",
+]
+
+[tool.ruff.lint]
+# Permissive on purpose - start with syntax + import correctness, expand later
+select = ["E9", "F"]
+ignore = [
+  "F401",  # unused imports - we have some legit ones in __init__ files
+  "F811",  # redefinition - tests fixture pattern can trigger
+]

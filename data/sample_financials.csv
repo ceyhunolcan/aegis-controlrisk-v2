@@ -1,0 +1,8 @@
+company_id,tsr_1y_vs_peer,tsr_3y_vs_peer,tsr_5y_vs_peer,ev_ebitda_discount_vs_peer,pe_discount_vs_peer,roic_gap_vs_peer,ebitda_margin_gap_vs_peer,fcf_yield_vs_peer,capex_intensity_vs_peer,revenue_growth_vs_peer,leverage_vs_peer,guidance_miss_frequency,earnings_miss_frequency,mna_writeoff_history_score,say_on_pay_support_pct,director_vote_support_avg_pct,recent_stock_momentum_score
+ORCX,-4.0,-7.0,-10.0,-12.0,-9.0,-3.5,-2.0,6.5,4.0,-1.5,0.4,0.2,0.25,55.0,84.0,91.0,48.0
+INDC,-18.0,-34.0,-42.0,-28.0,-24.0,-8.5,-6.0,-2.5,6.0,-3.5,1.8,0.62,0.58,84.0,71.0,82.0,22.0
+NVTC,14.0,22.0,31.0,8.0,6.0,5.0,4.5,3.5,-1.0,6.5,-0.6,0.08,0.1,25.0,95.0,97.0,78.0
+MDCO,-9.0,-15.0,-18.0,-18.0,-14.0,-4.0,-3.0,1.0,2.5,-2.0,1.1,0.35,0.32,60.0,65.0,79.0,38.0
+RETR,-14.0,-22.0,-29.0,-16.0,-13.0,-5.5,-4.5,-0.5,1.5,-4.0,0.9,0.45,0.5,45.0,75.0,85.0,30.0
+HMED,-6.0,-3.0,2.0,-10.0,-8.0,-2.0,-1.5,2.5,1.0,1.5,0.2,0.18,0.2,40.0,88.0,93.0,55.0
+CBNK,-2.0,-5.0,-3.0,-7.0,-5.0,-1.5,-1.0,4.0,0.0,0.0,0.5,0.15,0.18,50.0,82.0,89.0,52.0

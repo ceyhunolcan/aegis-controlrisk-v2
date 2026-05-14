@@ -1,0 +1,21 @@
+event_id,company_id,event_date,event_type,severity_score,description
+E001,INDC,2026-04-28,earnings_miss,80,Q4 EPS missed consensus by 18%; guidance cut for next year.
+E002,INDC,2026-05-08,activist_13d,90,Hawk Ridge filed 13D disclosing 6.4% stake.
+E003,INDC,2026-04-08,guidance_cut,75,FY guidance cut for second time this fiscal year.
+E004,RETR,2026-04-23,failed_say_on_pay,85,Say-on-pay support fell to 71%; binding vote in next AGM cycle.
+E005,RETR,2026-05-05,media_controversy,55,Wall Street Journal published critical capital allocation feature.
+E006,ORCX,2026-04-03,director_departure,50,Long-tenured independent director announced retirement.
+E007,ORCX,2026-05-01,ma_announcement,60,Announced $8B upstream acquisition; mixed analyst reaction.
+E008,MDCO,2026-04-18,ceo_change_rumor,65,Rumored CEO succession plan under review by board.
+E009,MDCO,2026-05-03,stock_drop,70,Stock dropped 12% in one week on streaming subscriber miss.
+E010,HMED,2026-03-24,ma_announcement,55,Analyst speculation of strategic review/sale process.
+E011,HMED,2026-04-25,earnings_miss,50,Q3 missed top-line by 3% but reaffirmed FY guide.
+E012,CBNK,2026-04-13,director_departure,35,Audit chair announced retirement effective AGM.
+E013,CBNK,2026-03-14,guidance_cut,50,Net interest margin guidance trimmed.
+E014,NVTC,2026-04-03,earnings_beat,20,Q2 earnings beat; raised guidance.
+E015,NVTC,2026-02-22,buyback_announcement,25,$3B buyback authorization approved.
+E016,ORCX,2026-03-04,media_controversy,60,Climate-disclosure shareholder proposal reached 38% support.
+E017,INDC,2026-01-13,stock_drop,65,12-month stock down 22%; underperformed peers by 18%.
+E018,RETR,2026-02-27,ceo_change_rumor,55,Board reportedly evaluating CEO succession.
+E019,MDCO,2026-02-07,failed_say_on_pay,70,Say-on-pay 65% support; below majority advisory comfort.
+E020,HMED,2026-05-10,activist_13d,80,Trident Engaged disclosed 2.4% stake and intent to seek strategic review.

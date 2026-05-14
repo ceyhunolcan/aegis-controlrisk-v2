@@ -1,0 +1,50 @@
+director_id,company_id,name,age,tenure_years,independent,committee_roles,is_committee_chair,other_public_boards,prior_vote_support_pct,sector_expertise_score,capital_allocation_expertise_score,technology_expertise_score,climate_transition_expertise_score,compensation_oversight_flag,audit_oversight_flag,governance_oversight_flag
+D001,ORCX,Margaret R. Cole,71,16.0,True,Audit,True,3,88.0,80,65,30,25,False,True,False
+D002,ORCX,Robert Tanaka,68,13.0,True,Compensation,True,2,84.0,75,55,40,30,True,False,False
+D003,ORCX,Sarah Whitfield,58,4.0,True,Governance,False,1,94.0,70,60,50,70,False,False,True
+D004,ORCX,James A. Hollis,65,9.0,True,Audit,False,2,92.0,78,70,35,28,False,True,False
+D005,ORCX,Eleanor Park,62,7.0,True,Nominating,False,1,90.0,65,55,60,65,False,False,True
+D006,ORCX,Marcus L. Brennan,67,11.0,True,Compensation,False,2,86.0,72,50,30,35,True,False,False
+D007,ORCX,David Yusupov,69,14.0,False,None,False,0,89.0,85,60,25,20,False,False,False
+D008,INDC,Theodore Blackwood,73,18.0,True,Audit;Compensation,True,4,76.0,70,45,25,20,True,True,False
+D009,INDC,Patricia M. Gunn,70,15.0,True,Compensation,True,3,78.0,65,50,30,22,True,False,False
+D010,INDC,Charles W. Eastman,68,12.0,True,Audit,True,3,81.0,60,40,28,25,False,True,False
+D011,INDC,Helena Marquez,64,10.0,True,Governance,False,2,84.0,55,45,35,30,False,False,True
+D012,INDC,Frank N. Doyle,71,16.0,True,Strategy,False,2,79.0,75,35,25,18,False,False,False
+D013,INDC,Linda Trevino,59,5.0,True,Audit,False,1,90.0,60,70,50,40,False,True,False
+D014,INDC,Walter J. Kim,66,13.0,False,None,False,1,82.0,80,55,30,25,False,False,False
+D015,NVTC,Aiden Chen,54,3.0,True,Audit,False,1,96.0,80,75,90,50,False,True,False
+D016,NVTC,Dr. Rebecca Singh,51,4.0,True,Compensation,True,2,95.0,75,65,85,55,True,False,False
+D017,NVTC,Michael O'Brien,59,6.0,True,Governance,True,1,97.0,70,70,80,50,False,False,True
+D018,NVTC,Yuki Tanaka,47,2.0,True,Audit,False,1,98.0,78,60,92,60,False,True,False
+D019,NVTC,Carlos Mendez,56,5.0,True,Nominating,False,2,94.0,72,75,75,45,False,False,True
+D020,NVTC,Olivia Hartwell,53,4.0,True,Compensation,False,1,96.0,68,70,80,55,True,False,False
+D021,NVTC,Brian P. Foster,60,7.0,False,None,False,0,95.0,85,80,85,50,False,False,False
+D022,MDCO,Vincent Caruso Jr.,76,24.0,False,None,True,1,88.0,80,50,35,30,False,False,False
+D023,MDCO,Maria Caruso,72,22.0,False,None,False,0,89.0,70,45,30,25,False,False,False
+D024,MDCO,Anthony R. Levin,70,18.0,True,Audit,True,3,75.0,65,55,40,30,False,True,False
+D025,MDCO,Diane K. Mitsubishi,67,14.0,True,Compensation,True,2,73.0,60,50,45,35,True,False,False
+D026,MDCO,Howard Stelman,69,16.0,True,Governance,False,2,78.0,62,48,38,30,False,False,True
+D027,MDCO,Patricia O'Connell,63,8.0,True,Audit,False,1,85.0,65,60,50,45,False,True,False
+D028,MDCO,Gerald F. Stein,71,19.0,True,Strategy,False,1,80.0,70,50,35,28,False,False,False
+D029,RETR,Stephen Holbrook,66,14.0,False,None,True,1,81.0,70,50,30,25,False,False,False
+D030,RETR,Janet Greenwood,65,12.0,True,Audit,True,2,80.0,60,55,35,30,False,True,False
+D031,RETR,Rashid Patel,61,9.0,True,Compensation,True,2,84.0,65,50,40,35,True,False,False
+D032,RETR,Mary B. Sutherland,68,15.0,True,Governance,True,3,78.0,55,45,30,28,False,False,True
+D033,RETR,Tom J. Wexler,58,6.0,True,Nominating,False,1,89.0,75,65,50,40,False,False,True
+D034,RETR,Andrea Schulman,56,4.0,True,Audit,False,1,92.0,70,60,55,45,False,True,False
+D035,RETR,Daniel R. Powell,64,11.0,True,Compensation,False,2,83.0,68,55,40,30,True,False,False
+D036,HMED,Dr. Elena Rodriguez,58,5.0,True,Audit,True,1,94.0,80,60,50,40,False,True,False
+D037,HMED,Bradley K. Yates,62,8.0,True,Compensation,True,2,91.0,75,65,45,35,True,False,False
+D038,HMED,Patricia Liang MD,55,4.0,True,Governance,False,1,95.0,82,55,40,38,False,False,True
+D039,HMED,Stephen Albright,67,11.0,True,Audit,False,2,89.0,70,70,50,30,False,True,False
+D040,HMED,Karen M. Vasquez,60,7.0,True,Nominating,False,1,92.0,72,60,55,40,False,False,True
+D041,HMED,Dr. Pavel Ostrovsky,64,9.0,True,Compensation,False,2,90.0,78,55,48,35,True,False,False
+D042,HMED,Charles E. Devereaux,69,13.0,False,None,False,0,88.0,80,65,45,30,False,False,False
+D043,CBNK,Walter G. Hampton,70,12.0,True,Audit,True,2,87.0,80,65,35,25,False,True,False
+D044,CBNK,Susan E. Lin,64,9.0,True,Risk,True,1,90.0,78,70,40,30,False,True,False
+D045,CBNK,Mohammad Rahman,61,7.0,True,Compensation,True,1,89.0,72,60,35,28,True,False,False
+D046,CBNK,Caroline B. Wright,58,5.0,True,Governance,False,2,92.0,70,65,45,35,False,False,True
+D047,CBNK,Joseph T. Marconi,63,8.0,True,Audit,False,1,88.0,75,68,38,30,False,True,False
+D048,CBNK,Margaret Yoshida,56,4.0,True,Compliance,False,1,93.0,73,62,42,32,False,False,True
+D049,CBNK,Robert J. Kim,59,6.0,False,None,False,0,91.0,80,70,35,25,False,False,False

@@ -1,0 +1,9 @@
+archetype_id,name,style,preferred_market_cap_min,preferred_market_cap_max,board_seat_preference,public_campaign_aggressiveness,settlement_preference,esg_weight,value_weight,governance_weight,operational_weight,typical_stake_pct
+A001,Confrontational Public-Letter Activist,public letter,5000000000,200000000000,3,88,35,20,80,70,70,5.0
+A002,Constructive Engagement Activist,quiet engagement,2000000000,100000000000,1,35,85,40,65,60,65,2.5
+A003,Operational Turnaround Activist,short-slate proxy contest,1000000000,50000000000,2,70,55,25,60,50,90,4.5
+A004,Breakup / Strategic-Alternatives Activist,strategic alternatives campaign,3000000000,80000000000,2,75,50,20,85,55,60,4.0
+A005,ESG / Transition Activist,ESG/transition campaign,10000000000,500000000000,2,60,60,95,40,65,45,1.2
+A006,Settlement-First Pragmatist,settlement-oriented pressure,1500000000,60000000000,1,40,90,30,70,55,60,3.0
+A007,Governance-Focused Pension/SWF Engager,quiet engagement,20000000000,1000000000000,1,25,80,80,45,95,30,1.0
+A008,Control-Seeking Acquirer-Activist,control-oriented campaign,500000000,25000000000,5,90,25,10,80,60,85,9.0

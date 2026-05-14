@@ -1,0 +1,27 @@
+holder_id,name,holder_type,governance_sensitivity_score,activism_support_history_score,proxy_advisor_dependence_score,esg_sensitivity_score,value_orientation_score,settlement_preference_score,retail_mobilization_score
+H001,Global Index Trust,passive,70,35,80,60,40,55,5
+H002,Sentinel Index Partners,passive,68,32,78,55,38,60,5
+H003,Liberty Passive Funds,passive,62,30,75,50,40,58,5
+H004,Crestwood Value Partners,active,60,70,40,35,90,45,10
+H005,Halberd Capital Mgmt,active,65,75,35,40,85,40,15
+H006,Pinnacle Quality Investors,active,55,45,30,45,75,50,8
+H007,Public Employees Retirement,pension,85,60,70,80,50,50,5
+H008,Teachers Pension Trust,pension,82,55,68,85,45,55,5
+H009,Northern Pension Alliance,pension,78,50,65,72,48,60,5
+H010,Hawk Ridge Activist Partners,activist,75,95,30,40,80,60,30
+H011,Granite Activist Capital,activist,72,92,25,35,85,65,35
+H012,Trident Engaged Holdings,activist,70,90,30,50,80,55,40
+H013,CEO & Affiliated Trusts (ORCX),insider,30,5,20,40,50,50,5
+H014,Caruso Family Holdings (MDCO),insider,25,5,15,35,45,45,5
+H015,Founder Trust (NVTC),insider,35,10,25,45,55,50,5
+H016,Retail Investor Aggregate,retail,45,50,30,50,55,50,70
+H017,Norwegian-Style Sovereign Fund,sovereign,85,55,60,90,60,65,5
+H018,Pacific Sovereign Allocator,sovereign,70,45,55,65,60,70,5
+H019,Vanguard-Style Equity Index,passive,75,38,65,62,45,55,5
+H020,Marlin Long-Only Equity,active,65,55,45,55,70,50,10
+H021,Atlas Growth Capital,active,50,40,35,50,50,55,12
+H022,Bedrock Income Fund,active,60,50,50,45,75,65,8
+H023,Coastal Pension Board,pension,80,58,72,78,50,60,5
+H024,Heritage Family Office,other,55,45,30,50,65,55,10
+H025,Apex Hedge Fund Multi-Strat,active,55,65,30,35,75,55,15
+H026,Sigma Long-Short Equity,active,58,60,32,40,70,50,12

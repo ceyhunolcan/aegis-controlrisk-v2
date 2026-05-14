@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Compile check
+        run: python -m compileall -q .
+
+      - name: Smoke test
+        run: python smoke_test.py
+
+      - name: Unit tests (pytest)
+        run: pytest -q
+
+      - name: Unit tests (stdlib runner)
+        # cross-check the standalone runner so it can't silently rot
+        run: python run_tests.py
+
+      - name: Bug regression sweep
+        run: python bug_test.py
+
+      - name: Synthetic backtest
+        run: python -m aegis.backtesting.backtest_runner
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ruff
+        run: pip install ruff
+      - name: Ruff check
+        # Permissive ruleset for now - just catch syntax errors and unused
+        # imports. Tighten later.
+        run: ruff check --select=E9,F63,F7,F82 .
