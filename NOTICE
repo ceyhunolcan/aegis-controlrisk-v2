@@ -1,0 +1,35 @@
+Aegis ControlRisk OS
+====================
+
+Copyright (c) 2026. All rights reserved.
+
+This software, including its source code, documentation, models, scoring
+methodologies, weights, claim-graph design, Monte Carlo simulation
+formulation, and all accompanying materials, is proprietary intellectual
+property.
+
+The source is made available on GitHub for evaluation, code review, and
+academic study. Commercial use of any kind requires a written license.
+See LICENSE and COMMERCIAL.md for details.
+
+Notable proprietary components include but are not limited to:
+
+  - The CASCADE-2 32-step pipeline architecture
+  - The vulnerability scoring composite and its weight distribution
+  - The fixability composite, including the Value-Trap classification
+  - The activist DNA archetype-matching scoring method
+  - The claim graph construction and power-scoring formulation
+  - The shareholder coalition modeling and swing-shareholder ranking
+  - The proxy advisor shadow-report scoring method
+  - The settle-vs-fight game-theory utility model
+  - The Monte Carlo proxy contest simulation parameters
+  - The causal twin defense-action interaction effects
+  - The market-reaction expected-value computation
+  - The final score composite and risk-level escalation rule
+
+Third-party dependencies (pandas, numpy, networkx, scipy, plotly,
+streamlit, etc.) are used under their respective open-source licenses;
+see their individual documentation. The Aegis software itself is not
+licensed under those terms.
+
+For licensing inquiries, see COMMERCIAL.md.

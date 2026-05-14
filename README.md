@@ -2,19 +2,26 @@
 
 [![CI](https://github.com/your-org/aegis-controlrisk-v2/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/aegis-controlrisk-v2/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/license-Proprietary-orange.svg)](LICENSE)
+[![Commercial use: License required](https://img.shields.io/badge/commercial%20use-license%20required-red.svg)](COMMERCIAL.md)
 
-A local MVP for activism risk + shareholder defense analytics. Pick a
-ticker, get back a 0-100 risk score, a 12-month event probability, the
-most likely activist thesis, board-level vulnerability, a Monte Carlo
-proxy contest simulation, a settle-vs-fight recommendation, and a
-15-section board memo. Everything runs locally against a synthetic
-dataset; no paid APIs.
+> ⚠️ **Source-available, not open-source.** The code is public so you
+> can read it, evaluate it, and learn from it. Running it in any
+> commercial, internal-tooling, or revenue-generating context requires
+> a paid license. See [LICENSE](LICENSE) and
+> [COMMERCIAL.md](COMMERCIAL.md).
+
+Aegis ControlRisk OS is an activism risk + shareholder defense
+analytics engine. Pick a ticker, get back a 0-100 risk score, a
+12-month event probability, the most likely activist thesis,
+board-level vulnerability, a Monte Carlo proxy contest simulation, a
+settle-vs-fight recommendation, and a 15-section board memo.
+Everything runs locally against a synthetic dataset; no paid APIs.
 
 The engine is called CASCADE-2. The "2" is mostly because v1 didn't
 have the simulation layer.
 
-## Quick start
+## Quick start (evaluation only)
 
 ```bash
 git clone https://github.com/your-org/aegis-controlrisk-v2.git
@@ -32,6 +39,8 @@ python aegis_cli.py batch --workers 4             # whole synthetic universe
 python aegis_cli.py snapshot save INDC --note "Q3"
 python aegis_cli.py alerts INDC --min-severity high
 ```
+
+For commercial use, [contact us](COMMERCIAL.md).
 
 ## What's in here
 
@@ -305,3 +314,24 @@ with this repo is entirely synthetic.
   prediction
 - v3.0: Postgres-backed workspaces, FastAPI + Next.js frontend,
   per-tenant audit log
+
+## Licensing
+
+Aegis ControlRisk OS is **source-available, not open-source**. The
+source code is published on GitHub so you can read it, learn from it,
+and evaluate whether to license it. Running it in any commercial,
+internal-tooling, or revenue-generating context requires a paid
+license.
+
+- **Allowed without a license**: reading the code, forking for
+  evaluation, academic research with synthetic data, submitting
+  contributions
+- **Requires a commercial license**: production use, internal
+  deployment at any organization, integration with real data,
+  embedding in a product, SaaS offering, consulting deliverables
+
+See [LICENSE](LICENSE) for the full terms and [COMMERCIAL.md](COMMERCIAL.md)
+for the commercial licensing path.
+
+If you're not sure whether your use case requires a license, ask
+first.

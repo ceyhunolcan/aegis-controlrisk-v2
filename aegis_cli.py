@@ -1,6 +1,9 @@
 # Aegis CLI. The dashboard is great for browsing, but for cron jobs, CI
 # pipelines, or scripted workflows you want a plain command-line tool.
 #
+# Aegis ControlRisk OS — Copyright (c) 2026. All rights reserved.
+# Source-available under a proprietary license. See LICENSE / COMMERCIAL.md.
+#
 # Usage:
 #   python aegis_cli.py analyze INDC                  # run one
 #   python aegis_cli.py analyze INDC --json           # JSON output

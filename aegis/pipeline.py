@@ -3,6 +3,9 @@
 # from the dict it returns. Adding a new view = adding a new consumer, not a
 # new entry point.
 #
+# CASCADE-2 pipeline architecture is proprietary IP. Copyright (c) 2026.
+# Source-available under a proprietary license. See LICENSE / COMMERCIAL.md.
+#
 # The pipeline runs ~32 steps in a specific order. The non-obvious dependency:
 # director scoring has to happen BEFORE the claim graph, because claims about
 # specific directors reference the per-director vulnerability scores. And we

@@ -119,6 +119,25 @@ No business logic in `app.py`, `aegis_cli.py`, or anything in
 5. CI will run; address any failures
 6. Squash on merge
 
+## Contributions and licensing
+
+By submitting a pull request, you confirm that:
+
+1. Your contribution is your original work (or you have permission to
+   submit it).
+2. You grant the copyright holder a perpetual, royalty-free,
+   worldwide, irrevocable license to use, modify, sublicense, and
+   distribute your contribution as part of Aegis ControlRisk OS,
+   including in commercial offerings.
+3. You understand Aegis is source-available under a proprietary
+   license (see [LICENSE](LICENSE)) and that your contribution will be
+   licensed on the same terms.
+
+This is essentially a lightweight CLA. If you need a more formal
+arrangement before contributing (e.g. on behalf of an employer), email
+the path in [COMMERCIAL.md](COMMERCIAL.md) and we'll work something
+out.
+
 ## What I'd love help with
 
 - Implement the real ingest sources (`aegis/ingest/sources.py` —
